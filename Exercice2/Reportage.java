@@ -1,10 +1,6 @@
 public class Reportage extends Emission {
 
-    // Attribut
-
     private String theme;
-
-    // Constructeur
 
     public Reportage(String name, int duration, String theme){
         this.name = name;
@@ -12,11 +8,6 @@ public class Reportage extends Emission {
         this.theme = theme;
         this.end = start + duration;
     }
-
-    // Verifie si l'émission est programmable et si elle l'est, retourne true
-    /* Un reportage est programmable que dans 1 cas : 
-        - si ils ne durent qu'une heure ou moins et qu'ils soient dans une heure creuse (14h –18h et 0h-6h)
-    */
 
     public boolean Programmer(int start){
         if (duration <= 1) {
@@ -34,8 +25,6 @@ public class Reportage extends Emission {
             return false;
         }
     }
-
-    // Affiche les informations sur le reportage
 
     public void Affiche() {
         super.Affiche();

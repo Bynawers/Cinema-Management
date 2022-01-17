@@ -2,21 +2,15 @@ import java.util.ArrayList;
 
 public class Formation {
 
-    // Attributs (Question.6)
-
     private String intitulé;
     private int nbrJours;
     ArrayList<Stagiaire> stagiaires = new ArrayList<>();
-
-    // Constructeur (Question.6)
 
     public Formation(String intitulé, int nbrJours, ArrayList<Stagiaire> stagiaires) {
         this.intitulé = intitulé;
         this.nbrJours = nbrJours;
         this.stagiaires = stagiaires;
     }
-
-    // Getters et Setters (Question.6)
 
     public String getIntitulé() {
         return intitulé;
@@ -31,10 +25,6 @@ public class Formation {
         this.intitulé = intitulé;
     }
 
-    // Retourne la moyenne des moyennes des stagiaires (Question.7)
-    /* Somme la totalité des moyenne des stagiaires de la formation
-    puis les divises par la taille du tableau de stagiaire (nombre de stagiaire) */
-
     public double calculerMoyenneFormation(){
 
         int i = 1;
@@ -48,9 +38,6 @@ public class Formation {
         moyenne = moyenne / i;
         return moyenne;
     }
-
-    // Retourne le premier stagiaire ayant la meilleure moyenne d’une formation (Question.8)
-    /* Parcours le tableau de stagiaire de la formation pour trouver la moyenne la plus grande */
 
     public Stagiaire afficherNomMax(){
 
@@ -69,19 +56,12 @@ public class Formation {
         return stagiaires.get(indexPremier);
     }
 
-    // Retourne la note minimale du premier stagiaire ayant la meilleure moyenne d’une formation (Question.9)
-    /* Cherche le premier stagiaire de la formation puis retourne sa note minimale*/
-
     public double afficherMinMax(){
 
         Stagiaire premier = afficherNomMax();
         return premier.trouverMin();           
 
     }
-
-    // Retourne la moyenne du premier stagiaire dont le nom est passé en paramètre (Question.10)
-    /* Parcours le tableau de stagiaire et cherche si le nom rentré
-    en paramètre est égal au nom d'un des stagiaires dans le tableau*/
 
     public double trouverMoyenneParNom(String nom){
 
